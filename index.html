@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		.container {
+			display: none
+		}
+
+		.container1 {
+			display: none
+		}
+	</style>
+
+	<meta charset="UTF-8">
+
+</head>
+
+<body>
+
+	<button id="m1">ADD MOBILE</button>
+	<button id="b1">ADD BOOK</button>
+	<div class="container" id="cont">
+		<h1>MOBILE COLLECTIONS</h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+				</tr>
+				<tr>
+					<th>compnay</th>
+					<th>model</th>
+					<th>price</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td><input class="company-input"></td>
+					<td><input class="modl-input"></td>
+					<td><input class="price-input"></td>
+					<td><button class="add-mobiles">Add</button></td>
+				</tr>
+			</thead>
+
+			<tbody class="mobiles-list"></tbody>
+		</table>
+	</div>
+
+	<script type="text/template" class="mobiles-list-template">
+		<td><span class="company"><%= company %></span></td>
+		<td><span class="modl"><%= modl %></span></td>
+		<td><span class="price"><%= price %></span></td>
+		<td><button class="edit-mobile">Edit</button>
+			<button class="delete-mobile">Delete</button>
+			<button class="update-mobile" style="display:none">Update</button> <button class="cancel" style="display:none">Cancel</button></td>
+	</script>
+	<div class="container1" id="cont1">
+		<h1>BOOK COLLECTIONS</h1>
+
+		<table class="table1">
+			<thead>
+				<tr>
+				</tr>
+				<tr>
+					<th>Name</th>
+					<th>Author</th>
+					<th>price1</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td><input class="name-input"></td>
+					<td><input class="author-input"></td>
+					<td><input class="price1-input"></td>
+					<td><button class="add-books">Add</button></td>
+				</tr>
+			</thead>
+
+			<tbody class="books-list"></tbody>
+		</table>
+	</div>
+
+	<script type="text/template" class="books-list-template">
+		<td><span class="name"><%= name %></span></td>
+		<td><span class="author"><%= author %></span></td>
+		<td><span class="price1"><%= price1 %></span></td>
+		<td><button class="edit-book">Edit</button>
+			<button class="delete-book">Delete</button>
+			<button class="update-book" style="display:none">Update</button>
+			<button class="cancel" style="display:none">Cancel</button></td>
+	</script>
+	<script src="v/jquery/jquery.js"></script>
+	<script src="v/underscore/underscore.js"></script>
+	<script src="v/backbone/backbone.js"></script>
+	<script src="scripts.js"></script>
+	<script src="scripts1.js"></script>
+	<script type="text/javascript">
+		$("#m1").click(function () {
+
+			$("#cont").toggleClass("container");
+
+		});
+		$("#b1").click(function () {
+
+			$("#cont1").toggleClass("container1");
+
+		});
+	</script>
+
+</body>
+
+</html>
